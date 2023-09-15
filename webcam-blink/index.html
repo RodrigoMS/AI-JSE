@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlinkToPlay</title>
+  <style>
+
+    body {
+      background-color: black;
+    }
+
+    video {
+      width: 95%;
+      margin: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <video id="video" src="./assets/video.mp4" controls></video>
+  
+  <!-- type module - Permite usar import e export -->
+  <!-- Não sendo mais necessário carregar vários arquivos -->
+  <!-- de importação no arquivo HTML. -->
+  <script src="./src/index.js" type="module"></script> 
+</body>
+</html>
