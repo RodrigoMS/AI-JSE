@@ -8,6 +8,7 @@
 
     body {
       background-color: black;
+      color: white;
     }
 
     video {
@@ -15,10 +16,21 @@
       margin: 10px;
     }
 
+    .button-container {
+      margin-left: 20px;
+    }
+
   </style>
 </head>
 
 <body>
+  <div class="button-container">
+    <div>
+      <button type="button" id="init">Inicialize Blink Recognition</button>
+      <output id="status"></output>
+    </div>
+  </div>
+
   <video id="video" src="./assets/video.mp4" controls></video>
   
   <!-- type module - Permite usar import e export -->

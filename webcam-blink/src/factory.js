@@ -16,7 +16,7 @@ async function getWorker() {
         console.log('suporta')
 
         const worker = new Worker('./src/worker.js', {type: 'module'})
-        return
+        return worker
     }
 
     const workerMock = {
@@ -25,8 +25,10 @@ async function getWorker() {
     }
     console.log('não suporta')
     return workerMock
-    //1:14
 }
+
+const worker = await getWorker()
+worker.postMessage('he from factory')
 
 // await -> retorno de uma promise.
 const camera = await Camera.init()
@@ -36,7 +38,7 @@ const [rootPath] = window. location.href.split('/pages/')
 const factory = {
     async initialize() {
         return Controller.initialize({
-            view: new View({}),
+            view: new View(),
             service: new Service({
 
             })
